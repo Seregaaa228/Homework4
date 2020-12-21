@@ -1,6 +1,5 @@
 package People;
 
-import static java.lang.Boolean.parseBoolean;
 
 public class People {
     private String name;
@@ -22,8 +21,8 @@ public class People {
     @Override
     public String toString() {
         String result = "Person name: " + name + ", ";
-        result += "Father: " + (parseBoolean(String.valueOf(this.father)) ? this.father.name : "none") + ", ";
-        result += "Mother: " + (parseBoolean(String.valueOf(this.mother)) ? this.mother.name : "none") ;
+        result += "Father: " +( this.father != null ? this.father.name : " none" )+ ", ";
+        result += "Mother: " + (this.mother != null ? this.mother.name : "none") ;
         return result;
 
     }
