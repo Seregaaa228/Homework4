@@ -6,7 +6,6 @@ public class FactoryAccommodation extends Accommodation {
 
 
     }
-    @Override
     public void setTaxK(){
         System.out.println("Налог производственной недвижимости - " + (getS() * getTaxK() + "грн."));
     }
