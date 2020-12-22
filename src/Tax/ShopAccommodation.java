@@ -6,5 +6,13 @@ public class ShopAccommodation extends Accommodation {
         super(s, taxK);
         this.money = money;
     }
+    public void setTaxK(){
+        if (this.money < 100){
+            System.out.println("Налог не взымается");
+        }else {
+            System.out.println("Налог торговой недвижимости - " + (getS() * getTaxK() + "грн."));
+        }
+
+    }
 }
 

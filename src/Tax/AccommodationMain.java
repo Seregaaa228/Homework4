@@ -1,13 +1,20 @@
 package Tax;
 
-import static Tax.Accommodation.setTaxK;
+import java.util.List;
+
+
 
 public class AccommodationMain {
     public static void main(String[] args) {
-        FactoryAccommodation accommodation = new FactoryAccommodation(47,52);
-        LivingHouse accommodation1 = new LivingHouse(66,22,500);
-        ShopAccommodation accommodation2 = new ShopAccommodation(66,11,100);
-        setTaxK(accommodation1);
+        Accommodation accommodation = new FactoryAccommodation(47,52);
+        Accommodation accommodation1 = new LivingHouse(66,22,500);
+        Accommodation accommodation2 = new ShopAccommodation(66,11,100);
+        List<Accommodation> accommodationList = List.of(accommodation1, accommodation, accommodation2);
+        for (Accommodation an: accommodationList){
+            an.setTaxK();
+
+        }
+
 
     }
 }

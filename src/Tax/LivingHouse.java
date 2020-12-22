@@ -6,7 +6,8 @@ public class LivingHouse extends Accommodation{
         super(s, taxK);
         this.subsidia = subsidia;
     }
-    public int getSubsidia() {
-        return subsidia;
+    public void setTaxK(){
+        System.out.println("Налог жилой недвижимости - " + ((getS() * getTaxK()- subsidia) + "грн."));
     }
+
 }
