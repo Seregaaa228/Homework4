@@ -1,18 +1,11 @@
 package Tax;
 
 public class Accommodation {
-    private int s;
-    private int taxK;
-
-    public int getS() {
-        return s;
-    }
-    public int getTaxK() {
-        return taxK;
-    }
+    private double s;
+    private double taxK;
 
 
-    public Accommodation(int s, int taxK) {
+    public Accommodation(double s, double taxK) {
         this.s = s;
         this.taxK = taxK;
         System.out.println("Ваша площадь недвижимости - " + s + ".");
@@ -22,8 +15,11 @@ public class Accommodation {
     }
 
 
-    public void setTaxK() {
-        System.out.println("Налог недвижимости - " + (getS() * getTaxK() + "грн."));
+    public double calculateTax() {
+
+        double result = s * taxK;
+
+        return result;
     }
 }
 

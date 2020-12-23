@@ -1,18 +1,23 @@
 package Tax;
 
 public class ShopAccommodation extends Accommodation {
-    int money;
-    public  ShopAccommodation(int s, int taxK, int money){
+    double money;
+    public  ShopAccommodation(double s, double taxK, double money){
         super(s, taxK);
         this.money = money;
     }
-    public void setTaxK(){
+    @Override
+    public double calculateTax(){
         if (this.money < 100){
             System.out.println("Налог не взымается");
-        }else {
-            System.out.println("Налог торговой недвижимости - " + (getS() * getTaxK() + "грн."));
+            return 0;
+        } else {
+            double i =  super.calculateTax();
+            System.out.println(i);
+            return  i;
         }
+    }
 
     }
-}
+
 
