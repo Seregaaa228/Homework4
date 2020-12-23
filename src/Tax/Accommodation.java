@@ -1,8 +1,8 @@
 package Tax;
 
 public class Accommodation {
-    private double s;
-    private double taxK;
+    double s;
+    double taxK;
 
 
     public Accommodation(double s, double taxK) {
@@ -17,9 +17,10 @@ public class Accommodation {
 
     public double calculateTax() {
 
-        double result = s * taxK;
 
+        double result = s * taxK;
         return result;
+
     }
 }
 
