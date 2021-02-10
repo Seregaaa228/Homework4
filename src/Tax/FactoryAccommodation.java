@@ -7,9 +7,5 @@ public class FactoryAccommodation extends Accommodation {
 
     }
 
-    @Override
-    public double calculateTax() {
-        double k = super.calculateTax();
-        return k;
-    }
+
 }

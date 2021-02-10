@@ -14,8 +14,7 @@ public class ShopAccommodation extends Accommodation {
             return 0;
 
         } else {
-            double i = super.calculateTax();
-            return i;
+         return super.calculateTax();
         }
     }
 }
